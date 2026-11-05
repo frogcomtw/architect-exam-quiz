@@ -62,7 +62,7 @@ function renderQuestion() {
   $('answerLink').href=s.key; $('answerLink').hidden=!locked;
   $('questionMarker').style.top=q.top+'%';
   const img=$('paperImage'); img.onload=positionQuestion;
-  if (img.getAttribute('src')!==q.image) img.src=q.image; else positionQuestion();
+  if (img.getAttribute('src')!==q.image) img.src=q.image.startsWith('pages/') ? q.image.slice(6) : q.image;q.image; else positionQuestion();
   $('options').replaceChildren();
   for(const letter of ['A','B','C','D']) {
     const btn=document.createElement('button');btn.className='option';btn.textContent=letter;
