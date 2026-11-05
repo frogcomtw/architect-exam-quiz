@@ -1,4 +1,4 @@
-'use strict';
+q.image;'use strict';
 const $ = id => document.getElementById(id);
 const BANK = window.QUIZ_DATA;
 const STORAGE = 'archi-practice-114-v1';
